@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXFilterComboBox?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootpane" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30;" stylesheets="@../css/Member_Insertion.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Klub.Guns">
+   <children>
+      <Pane fx:id="gun_pane" layoutX="87.0" layoutY="17.0" prefHeight="565.0" prefWidth="687.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="224.0" layoutY="14.0" prefHeight="67.0" prefWidth="218.0" text="Dodaj Broń">
+               <font>
+                  <Font name="System Bold" size="39.0" />
+               </font>
+            </Label>
+            <MFXTextField fx:id="kind_gun" floatingText="Rodzaj" layoutX="53.0" layoutY="86.0" prefHeight="49.0" prefWidth="270.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </MFXTextField>
+            <Label id="validationLabel" fx:id="validationLabelKind" layoutX="55.0" layoutY="136.0" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="17.0" prefWidth="270.0" textFill="#ef6e6b" visible="false" wrapText="true" />
+            <MFXTextField fx:id="brand_gun" floatingText="Marka" layoutX="53.0" layoutY="155.0" prefHeight="49.0" prefWidth="270.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </MFXTextField>
+            <Label id="validationLabel" fx:id="validationLabelBrand" layoutX="53.0" layoutY="204.0" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="17.0" prefWidth="270.0" textFill="#ef6e6b" visible="false" wrapText="true" />
+            <MFXFilterComboBox fx:id="type_gun_combo" floatingText="Typ" layoutX="343.0" layoutY="86.0" prefHeight="49.0" prefWidth="270.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </MFXFilterComboBox>
+            <MFXTextField fx:id="caliber_gun" floatingText="Kaliber" layoutX="343.0" layoutY="155.0" prefHeight="49.0" prefWidth="270.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </MFXTextField>
+            <Label id="validationLabel" fx:id="validationLabelCal" layoutX="344.0" layoutY="205.0" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="17.0" prefWidth="270.0" textFill="#ef6e6b" visible="false" wrapText="true" />
+            <MFXTextField fx:id="number_gun" floatingText="Numer fabryczny" layoutX="53.0" layoutY="223.0" prefHeight="49.0" prefWidth="559.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </MFXTextField>
+            <Label id="validationLabel" fx:id="validationLabelNumber" layoutX="55.0" layoutY="275.0" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="17.0" prefWidth="270.0" textFill="#ef6e6b" visible="false" wrapText="true" />
+            <MFXTextField fx:id="productionDate_gun" floatingText="Rok Produkcji" layoutX="53.0" layoutY="300.0" prefHeight="49.0" prefWidth="270.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </MFXTextField>
+            <Label id="validationLabel" fx:id="validationLabelYear" layoutX="54.0" layoutY="351.0" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="17.0" prefWidth="270.0" textFill="#ef6e6b" visible="false" wrapText="true" />
+
+<!--            <Button fx:id="member_insertion" layoutX="76.0" layoutY="535.0" mnemonicParsing="false" onAction="#MemberInserted" prefHeight="49.0" prefWidth="533.0" style="-fx-background-radius: 70; -fx-background-color: #132743;" text="INSERT" textFill="#eeeeee" />-->
+            <MFXButton fx:id="gun_insertion" layoutX="67.0" layoutY="415.0" mnemonicParsing="false" onAction="#GunInserted" prefHeight="49.0" prefWidth="533.0" text="Dodaj">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </MFXButton>
+
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

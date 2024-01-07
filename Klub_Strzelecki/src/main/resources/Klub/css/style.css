@@ -1,0 +1,35 @@
+
+
+.option_btn{
+-fx-background-color: #132743;
+-fx-text-fill: #eeeeee;
+}
+
+.option_btn:hover{
+-fx-background-color:#3269b5;
+-fx-cursor:hand;
+}
+
+.outline-button {
+	-fx-background-color: transparent;
+	-fx-border-color: -mfx-purple;
+	-fx-border-radius: 3;
+
+	-fx-text-fill: -mfx-purple;
+}
+
+.outline-button:hover,
+.outline-button:focused {
+	-fx-background-color: -mfx-purple;
+	-fx-text-fill: white;
+	-fx-cursor:hand;
+}
+
+#generateExcelBtn{
+    -fx-background-color:#dfdfdf;
+}
+
+#generateExcelBtn:hover{
+    -fx-border-color: -mfx-green;
+    -fx-cursor:hand;
+}

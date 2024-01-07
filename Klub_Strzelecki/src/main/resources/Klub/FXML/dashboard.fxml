@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootpane" prefHeight="603.0" prefWidth="968.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30;" stylesheets="@../css/MFXColors.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Klub.dashboard">
+   <children>
+      <Pane layoutX="17.0" layoutY="15.0" prefHeight="587.0" prefWidth="678.0" style="-fx-background-radius: 30;" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="15.0">
+         <children>
+            <Pane layoutX="21.0" layoutY="54.0" prefHeight="108.0" prefWidth="208.0" style="-fx-background-color: #CBC3E3;" styleClass="grid-background" stylesheets="@../css/Common.css">
+               <children>
+                  <Text fill="#eeeeee" layoutX="79.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-fill: #FFFFFF;" text="Broń" wrappingWidth="84.45624999999995">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="GunsCount" fill="#eeeeee" layoutX="134.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="59.13671875">
+                     <font>
+                        <Font name="System Bold" size="34.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="42.0" fitWidth="43.0" layoutX="24.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image fx:id="settingImage" url="@../IMG/gun.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutX="258.0" layoutY="54.0" prefHeight="108.0" prefWidth="333.0" style="-fx-background-color: #CBC3E3;" styleClass="grid-background" stylesheets="@../css/Common.css">
+               <children>
+                  <Text fill="#eeeeee" layoutX="14.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-fill: #FFFFFF;" text="dostępna" wrappingWidth="111.65620117187495">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="GunsCountAvail" fill="#eeeeee" layoutX="40.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="59.13671875">
+                     <font>
+                        <Font name="System Bold" size="34.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#eeeeee" layoutX="180.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-fill: #FFFFFF;" text="użyczona" wrappingWidth="111.65620117187495">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="GunsCountRent" fill="#eeeeee" layoutX="206.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="59.13671875">
+                     <font>
+                        <Font name="System Bold" size="34.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane layoutX="613.0" layoutY="54.0" prefHeight="108.0" prefWidth="245.0" style="-fx-background-color: #CBC3E3;" styleClass="grid-background" stylesheets="@../css/Common.css">
+               <children>
+                  <Text fill="#eeeeee" layoutX="74.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Klubowicze" wrappingWidth="133.13671875">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="MemberCount" fill="#eeeeee" layoutX="133.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="66.13671875">
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="54.0" fitWidth="51.0" layoutX="14.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../IMG/membership-card.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label layoutX="40.0" layoutY="-7.0" prefHeight="54.0" prefWidth="228.0" text="Panel Główny">
+               <font>
+                  <Font name="System Bold" size="34.0" />
+               </font>
+            </Label>
+            <LineChart id="chart" fx:id="klubowicze_chart" layoutX="21.0" layoutY="170.0" prefHeight="409.0" prefWidth="500.0" stylesheets="@../css/dashboard.css" title="Nowi Klubowicze">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" fx:id="xAxis" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="yAxis" side="LEFT" />
+              </yAxis>
+            </LineChart>
+            <MFXButton id="buttonYear" fx:id="buttonYear" layoutX="472.0" layoutY="188.0" style="-fx-background-color: #f2f3f4;" stylesheets="@../css/dashboard.css" text="Rok" />
+            <MFXButton id="buttonMonth" fx:id="buttonMonth" layoutX="414.0" layoutY="188.0" style="-fx-background-color: #f2f3f4;" stylesheets="@../css/dashboard.css" text="Miesiąc" />
+            <MFXButton id="buttonThisYear" fx:id="buttonThisYear" layoutX="621.0" layoutY="203.0" style="-fx-border-color: -mfx-purple; -fx-background-color: #f2f3f4;" stylesheets="@../css/dashboard.css" text="ten rok" />
+            <MFXTextField fx:id="yearField" floatMode="ABOVE" floatingText="Podaj rok" layoutX="528.0" layoutY="201.0" prefHeight="30.0" prefWidth="83.0" />
+            <PieChart fx:id="bron_chart" layoutX="534.0" layoutY="258.0" prefHeight="284.0" prefWidth="410.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXPasswordField?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="anchorParent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="465.0" prefWidth="737.0" stylesheets="@../css/login.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Klub.MFXLogin_Controller">
+         <children>
+            <AnchorPane fx:id="login_page" prefHeight="385.0" prefWidth="604.0">
+               <children>
+                  <VBox prefHeight="465.0" prefWidth="737.0" AnchorPane.bottomAnchor="-80.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-133.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Pane id="pane" prefHeight="471.0" prefWidth="737.0">
+                           <children>
+                              <Label layoutX="62.0" layoutY="27.0" prefHeight="85.0" prefWidth="359.0" text="LOGOWANIE">
+                           <font>
+                              <Font name="System Bold" size="58.0" />
+                           </font></Label>
+                        <ImageView fitHeight="229.0" fitWidth="285.0" layoutX="111.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../IMG/administrator.png" />
+                           </image>
+                        </ImageView>
+                        <MFXButton fx:id="login_button" buttonType="RAISED" defaultButton="true" depthLevel="LEVEL3" layoutX="458.0" layoutY="302.0" onAction="#submitbutton" prefHeight="37.0" prefWidth="198.0" rippleAnimateShadow="true" rippleAnimationSpeed="2.0"  rippleRadius="27.0" rippleRadiusMultiplier="3.0" text="Zaloguj">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </MFXButton>
+                        <MFXTextField fx:id="username" floatingText="Nazwa Użytkownika:" floatingTextGap="2.0" layoutX="458.0" layoutY="116.0" prefHeight="37.0" prefWidth="198.0">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </MFXTextField>
+                        <MFXPasswordField fx:id="password" floatingText="Hasło:" floatingTextGap="6.0" layoutX="458.0" layoutY="206.0" prefHeight="37.0" prefWidth="198.0">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </MFXPasswordField>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Pane>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>

@@ -1,0 +1,48 @@
+@import "MFXColors.css";
+
+#anchorParent{
+-fx-background-color: none;
+}
+
+#pane{
+/*-fx-background-color: #132743;*/
+-fx-background-color: rgba(199, 199, 200, 1);
+}
+
+
+/*aktywne pole kolor ramki */
+.mfx-text-field:focus-within{
+/*-fx-border-color:-mfx-orange;*/
+-fx-border-color:-my-blue;
+}
+
+/*aktywne pole kolor floating text*/
+.mfx-text-field:focus-within .floating-text{
+/*-fx-text-fill:-mfx-orange;*/
+-fx-text-fill:-my-blue;
+}
+
+/*kursor rączka na icone*/
+.mfx-password-field .mfx-icon-wrapper{
+    -fx-cursor:hand;
+}
+
+.mfx-button {
+	-fx-background-color: #0085FF;
+    -fx-border-radius:15px;
+    -fx-text-fill:#ededed;
+}
+
+.mfx-button:hover{
+    -fx-cursor:hand;
+    -fx-background-color: #027ae8;
+}
+
+.mfx-button .text {
+	-fx-font-smoothing-type: lcd;
+}
+
+.label{
+-fx-text-fill:#000;
+}
+

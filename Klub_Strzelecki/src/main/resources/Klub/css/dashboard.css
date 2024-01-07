@@ -1,0 +1,50 @@
+@import 'MFXColors.css';
+
+
+/*              WYKRES         */
+/*             kolor lini               */
+.default-color0.chart-series-line {  -fx-stroke:-mfx-purple; }
+
+/*        kolor kółek na wukresie i na legendzie        */
+.default-color0.chart-line-symbol { -fx-background-color: -mfx-purple, white; -fx-background-radius: 0; }
+
+
+
+
+.axis{
+  -fx-tick-label-font-size: 1em;
+  -fx-font-color:#303030;
+}
+
+
+/*          linia przerywana             */
+.chart-series-line {
+    -fx-stroke-width: 4px;
+    -fx-effect: null;
+
+}
+
+.chart-legend-item-symbol{
+   -fx-background-radius: 0;
+}
+/*         tło wykresu         */
+.chart-plot-background {
+    -fx-background-color: transparent;
+}
+
+
+/*    kolor siatki X i Y na wykresie   */
+.chart-vertical-grid-lines {
+    -fx-stroke: #3278fa;
+}
+.chart-horizontal-grid-lines {
+    -fx-stroke: #3278fa;
+}
+
+
+#buttonYear,
+#buttonMonth,
+#buttonThisYear{
+-fx-background:#D3D3D3;
+-fx-cursor: hand;
+}

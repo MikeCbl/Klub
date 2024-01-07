@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXComboBox?>
+<?import io.github.palexdev.materialfx.controls.MFXDatePicker?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootpane" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30;" stylesheets="@../css/Member_Insertion.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Klub.Member">
+   <children>
+      <Pane fx:id="member_pane" layoutX="87.0" layoutY="17.0" prefHeight="565.0" prefWidth="687.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="233.0" layoutY="14.0" prefHeight="67.0" prefWidth="334.0" text="Dodaj Klubowicza">
+               <font>
+                  <Font name="System Bold" size="39.0" />
+               </font>
+            </Label>
+            <MFXTextField fx:id="name_member" floatingText="Imię" layoutX="53.0" layoutY="86.0" prefHeight="49.0" prefWidth="270.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </MFXTextField>
+            <Label id="validationLabel" fx:id="validationLabelName" layoutX="53.0" layoutY="135.0" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="17.0" prefWidth="270.0" textFill="#ef6e6b" visible="false" wrapText="true" />
+            <MFXTextField fx:id="lastName_member" floatingText="Nazwisko" layoutX="343.0" layoutY="86.0" prefHeight="49.0" prefWidth="270.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </MFXTextField>
+            <Label id="validationLabel" fx:id="validationLabelLastName" layoutX="345.0" layoutY="136.0" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="17.0" prefWidth="270.0" textFill="#ef6e6b" visible="false" wrapText="true" />
+
+            <MFXComboBox fx:id="gender_member" floatingText="Płeć" layoutX="637.0" layoutY="86.0" prefHeight="49.0" prefWidth="82.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </MFXComboBox>
+            <Label id="validationLabel" fx:id="validationLabelGender" layoutX="612.0" layoutY="136.0" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="17.0" prefWidth="175.0" textFill="#ef6e6b" visible="false" wrapText="true" />
+            <MFXDatePicker fx:id="birthDate_member" floatMode="INLINE" floatingText="Data urodzenia" layoutX="53.0" layoutY="160.0" prefHeight="38.0" prefWidth="175.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </MFXDatePicker>
+            <Label id="validationLabel" fx:id="validationLabelBirthDate" layoutX="53.0" layoutY="204.0" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="17.0" prefWidth="175.0" textFill="#ef6e6b" visible="false" wrapText="true" />
+            <MFXTextField fx:id="birthPlace_member" floatingText="Miejsce urodzenia" layoutX="236.0" layoutY="159.0" prefHeight="49.0" prefWidth="346.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </MFXTextField>
+            <Label id="validationLabel" fx:id="validationLabelBirthPlace" layoutX="238.0" layoutY="208.0" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="17.0" prefWidth="270.0" textFill="#ef6e6b" visible="false" wrapText="true" />
+            <MFXTextField fx:id="pesel_member" floatingText="Pesel" layoutX="594.0" layoutY="160.0" prefHeight="49.0" prefWidth="175.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </MFXTextField>
+            <Label id="validationLabel" fx:id="validationLabelPesel" layoutX="593.0" layoutY="208.0" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="32.0" prefWidth="175.0" textFill="#ef6e6b" visible="false" wrapText="true" />
+            <MFXTextField fx:id="email_member" floatingText="E-mail" layoutX="53.0" layoutY="232.0" prefHeight="49.0" prefWidth="307.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </MFXTextField>
+            <Label id="validationLabel" fx:id="validationLabelEmail" layoutX="53.0" layoutY="281.0" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="17.0" prefWidth="307.0" textFill="#ef6e6b" visible="false" wrapText="true" />
+            <MFXTextField fx:id="phone_member" floatingText="Nr telefonu" layoutX="373.0" layoutY="233.0" prefHeight="49.0" prefWidth="146.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </MFXTextField>
+            <Label id="validationLabel" fx:id="validationLabelPhone" layoutX="373.0" layoutY="281.0" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="17.0" prefWidth="146.0" textFill="#ef6e6b" visible="false" wrapText="true" />
+            <MFXTextField fx:id="address_member" floatingText="Adres zamieszkania" layoutX="53.0" layoutY="307.0" prefHeight="41.0" prefWidth="533.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </MFXTextField>
+            <Label id="validationLabel" fx:id="validationLabelAddress" layoutX="53.0" layoutY="358.0" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="17.0" prefWidth="307.0" textFill="#ef6e6b" visible="false" wrapText="true" />
+            <MFXDatePicker fx:id="date_member" floatMode="INLINE" floatingText="Data wstąpienia" layoutX="594.0" layoutY="307.0" prefHeight="44.0" prefWidth="175.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </MFXDatePicker>
+            <Label id="validationLabel" fx:id="validationLabelDate" layoutX="594.0" layoutY="350.0" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="17.0" prefWidth="175.0" textFill="#ef6e6b" visible="false" wrapText="true" />
+
+<!--            <Button fx:id="member_insertion" layoutX="76.0" layoutY="535.0" mnemonicParsing="false" onAction="#MemberInserted" prefHeight="49.0" prefWidth="533.0" style="-fx-background-radius: 70; -fx-background-color: #132743;" text="INSERT" textFill="#eeeeee" />-->
+            <MFXButton fx:id="member_insertion" layoutX="94.0" layoutY="431.0" mnemonicParsing="false" onAction="#MemberInserted" prefHeight="49.0" prefWidth="533.0" text="Dodaj">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </MFXButton>
+
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

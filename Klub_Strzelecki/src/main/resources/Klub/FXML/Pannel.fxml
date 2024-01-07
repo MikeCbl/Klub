@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="pannel_check" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="684.0" prefWidth="1200.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Klub.Pannel_librarian_Controller">
+   <children>
+      <Pane layoutX="25.0" layoutY="14.0" prefHeight="671.0" prefWidth="952.0" style="-fx-background-color: #bac2d1;" AnchorPane.bottomAnchor="-25.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox layoutX="-1.0" layoutY="-1.0" prefHeight="682.0" prefWidth="244.0" style="-fx-background-color: #bac2d1;">
+               <children>
+                  <Pane fx:id="VBOX_List" prefHeight="681.0" prefWidth="246.0">
+                     <children>
+                         <Button fx:id="dashbored" layoutY="92.0" mnemonicParsing="false" onAction="#DASHBORED_METHOD" prefHeight="58.0" prefWidth="233.0" styleClass="option_btn" text="PANEL GŁÓWNY" />
+                         <Button fx:id="newMember" layoutY="160.0" mnemonicParsing="false" onAction="#NEW_MEMBER_METHOD" prefHeight="58.0" prefWidth="233.0" styleClass="option_btn" text="DODAJ KLUBOWICZA" />
+                         <MFXButton fx:id="Member_list" layoutY="228.0" mnemonicParsing="false" onAction="#MEMBER_LIST_METHOD" prefHeight="58.0" prefWidth="233.0" styleClass="option_btn" text="KLUBOWICZE" />
+                         <MFXButton fx:id="Gun_insertion" layoutY="294.0" mnemonicParsing="false" onAction="#NEW_GUN_METHOD" prefHeight="58.0" prefWidth="233.0" styleClass="option_btn" text="DODAJ BROŃ" />
+                         <MFXButton fx:id="Gun_list" layoutY="363.0" mnemonicParsing="false" onAction="#GUN_LIST_METHOD" prefHeight="58.0" prefWidth="233.0" styleClass="option_btn" text="BROŃ" />
+                         <MFXButton fx:id="Gun_lending" layoutY="432.0" mnemonicParsing="false" onAction="#GUN_LENDING" prefHeight="58.0" prefWidth="233.0" styleClass="option_btn" text="UŻYCZENIA" />
+                         <MFXButton fx:id="Gun_lending_history" layoutY="501.0" mnemonicParsing="false" onAction="#LENDING_HISTORY" prefHeight="58.0" prefWidth="233.0" styleClass="option_btn" text="HISTORIA UŻYCZEŃ" />
+                     </children>
+                  </Pane>
+               </children>
+            </VBox>
+            <AnchorPane fx:id="rootpane" layoutX="245.0" layoutY="82.0" prefHeight="565.0" prefWidth="900.0" style="-fx-background-color: transparent; -fx-background-radius: 30;" />
+            <Text fill="#EEEEEE" layoutX="181.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ZARZĄDZANIE KLUBEM STRZELECKIM" wrappingWidth="702.13671875">
+               <font>
+                  <Font name="System Bold" size="38.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

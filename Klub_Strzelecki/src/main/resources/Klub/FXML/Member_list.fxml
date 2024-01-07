@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXRadioButton?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane fx:id="rootpane" prefHeight="611.0" prefWidth="1212.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Klub.Member_list">
+   <children>
+      <Pagination fx:id="pagination" layoutY="63.0" prefHeight="546.0" prefWidth="1200.0" stylesheets="@../css/TableView.css" />
+      <TableView fx:id="TableView" layoutY="63.0" prefHeight="485.0" prefWidth="1212.0" stylesheets="@../css/TableView.css">
+         <columns>
+            <TableColumn fx:id="colName" maxWidth="3000.0" minWidth="5.0" prefWidth="95.0" text="Imię" />
+            <TableColumn fx:id="colLastName" maxWidth="4000.0" prefWidth="127.0" text="Nazwisko" />
+            <TableColumn fx:id="colGender" maxWidth="2500.0" minWidth="8.0" prefWidth="20.0" text="Płeć" />
+            <TableColumn fx:id="colBirthDate" maxWidth="3000.0" minWidth="70.0" prefWidth="300.0" text="Data urodzenia" />
+            <TableColumn fx:id="colBirthPlace" maxWidth="3000.0" minWidth="70.0" prefWidth="300.0" text="Miejsce urodzenia" />
+            <TableColumn fx:id="colEmail" maxWidth="4000.0" minWidth="20.0" prefWidth="104.0" text="email" />
+            <TableColumn fx:id="colPhone" prefWidth="75.0" text="Nr telefonu" />
+            <TableColumn fx:id="colAddress" prefWidth="75.0" text="Adres zamieszkania" />
+            <TableColumn fx:id="colPesel" minWidth="8.0" prefWidth="50.0" text="Pesel" />
+            <TableColumn fx:id="colDate" prefWidth="75.0" text="Data wstąpienia" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+         <contextMenu>
+            <ContextMenu>
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#MemberEdit" text="Edytuj" />
+               </items>
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleRent" text="Użycz" />
+               </items>
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#MemberDelete" text="Usuń" />
+               </items>
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#RefreshMember" text="Odświerz" />
+               </items>
+            </ContextMenu>
+         </contextMenu>
+      </TableView>
+      <Pane layoutX="10.0" layoutY="10.0" prefHeight="42.0" prefWidth="1100.0">
+         <children>
+            <MFXRadioButton fx:id="sortName" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" text="Imię" />
+            <MFXRadioButton fx:id="sortLastName" layoutX="68.0" layoutY="13.0" mnemonicParsing="false" text="Nazwisko" />
+            <MFXRadioButton fx:id="sortGender" layoutX="152.0" layoutY="13.0" mnemonicParsing="false" text="Płeć" />
+            <MFXRadioButton fx:id="sortBirthDate" layoutX="209.0" layoutY="13.0" mnemonicParsing="false" text="Data urodzenia" />
+            <MFXRadioButton fx:id="sortBirthPlace" layoutX="325.0" layoutY="13.0" mnemonicParsing="false" text="Miejsce urodzenia" />
+            <MFXRadioButton fx:id="sortEmail" layoutX="456.0" layoutY="13.0" mnemonicParsing="false" text="Email" />
+            <MFXRadioButton fx:id="sortPhone" layoutX="517.0" layoutY="13.0" mnemonicParsing="false" text="Nr tel" />
+            <MFXRadioButton fx:id="sortAddress" layoutX="583.0" layoutY="13.0" mnemonicParsing="false" text="Adres" />
+            <MFXRadioButton fx:id="sortPesel" layoutX="646.0" layoutY="13.0" mnemonicParsing="false" text="Pesel" />
+            <MFXRadioButton fx:id="sortDate" layoutX="716.0" layoutY="13.0" mnemonicParsing="false" text="Date" />
+            <MFXRadioButton fx:id="sortAll" layoutX="774.0" layoutY="13.0" mnemonicParsing="false" text="All" />
+            <TextField fx:id="searchEngineMember" layoutX="834.0" layoutY="4.0" prefHeight="33.0" prefWidth="200.0" promptText="Wyszukaj klubowicza" style="-fx-background-radius: 30;" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

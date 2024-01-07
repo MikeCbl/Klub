@@ -1,0 +1,14 @@
+.mfx-button {
+	-fx-background-color: #0085FF;
+    -fx-border-radius:15px;
+    -fx-text-fill:#ededed;
+}
+
+.mfx-button:hover{
+    -fx-cursor:hand;
+    -fx-background-color: #027ae8;
+}
+
+.mfx-button .text {
+	-fx-font-smoothing-type: lcd;
+}
